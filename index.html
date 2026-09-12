@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HunterGuild — Enter the Guild</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">☼</button>
+
+  <main class="shell">
+    <section class="hero">
+      <div class="crest">HG</div>
+      <p class="eyebrow">THE HUNTER SOCIETY</p>
+      <h1>HUNTER<span>GUILD</span></h1>
+      <p class="tagline">Choose your path. Build your guild.</p>
+      <p class="intro">Create your hunter profile, join a guild, and build your legend.</p>
+    </section>
+
+    <section class="card">
+      <div class="tabs">
+        <button class="tab active" data-mode="login">Login</button>
+        <button class="tab" data-mode="register">Create Account</button>
+      </div>
+
+      <form id="authForm">
+        <label>Email
+          <input id="email" type="email" placeholder="you@example.com" required>
+        </label>
+        <label id="passwordLabel">Password
+          <input id="password" type="password" placeholder="••••••••" required minlength="6">
+        </label>
+        <label id="confirmLabel" class="hidden">Confirm password
+          <input id="confirmPassword" type="password" placeholder="••••••••" minlength="6">
+        </label>
+
+        <button class="primary" type="submit"><span id="submitText">Enter the Guild</span><b>→</b></button>
+      </form>
+
+      <div class="divider"><span>OR</span></div>
+      <button class="google" id="googleBtn"><span class="g">G</span> Continue with Google</button>
+      <p id="status" class="status"></p>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
